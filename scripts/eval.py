@@ -43,6 +43,7 @@ def main(config:str="config/config.py",
     detector.eval()
 
     if 'evaluate_func' in cfg.trainer:
+        print(PIPELINE_DICT)
         evaluate_detection = PIPELINE_DICT[cfg.trainer.evaluate_func]
         print("Found evaluate function")
     else:
