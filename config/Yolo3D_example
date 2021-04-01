@@ -3,7 +3,8 @@ import os
 import numpy as np
 
 cfg = edict()
-cfg.obj_types = ['Car', 'Pedestrian']
+#cfg.obj_types = ['Car', 'Pedestrian']
+cfg.obj_types = ['Car']
 
 ## trainer
 trainer = edict(
@@ -21,8 +22,8 @@ cfg.trainer = trainer
 
 ## path
 path = edict()
-path.data_path = "/home/std/data/kitti/object/training" # used in visualDet3D/data/.../dataset
-path.test_path = "/home/std/data/kitti/object/testing" # used in visualDet3D/data/.../dataset
+path.data_path = "/home/std/data/KITTI/object/training" # used in visualDet3D/data/.../dataset
+path.test_path = "/home/std/data/KITTI/object/testing" # used in visualDet3D/data/.../dataset
 path.visualDet3D_path = "/home/std/work/Dennis/visualDet3D/visualDet3D" # The path should point to the inner subfolder
 path.project_path = "/home/std/work/Dennis/visualDet3D/Yolo3D" # or other path for pickle files, checkpoints, tensorboard logging and output files.
 if not os.path.isdir(path.project_path):
